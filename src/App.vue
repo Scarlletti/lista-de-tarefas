@@ -1,5 +1,5 @@
 <template>
-    <div class='bg-[#ABA1C6] h-screen w-screen place-items-center place-content-center'>
+    <div class='bg-[#ABA1C6] min-h-screen w-screen place-items-center place-content-center'>
         <div class='grid text-center gap-[1rem] items-center'>
             <div
                 class='bg-[#DFDDF2] flex flex-col border-[0.2rem] rounded-[2rem] text-[#FFF5F6] border-[#FFF5F6] w-[12rem] h-[12rem] justify-center items-center text-3xl'>
@@ -14,15 +14,15 @@
                     class='bg-[#FFF5F6] rounded-[2rem] outline-none p-[0.2rem] text-[#ABA1C6] text-center border-none'
                     placeholder='Digite uma tarefa...'>
                 <button @click="addTask"
-                    class='bg-[#ABA1C6] rounded-[2rem] text-[#FFF5F6] outline-none text-center p-[0.6rem] '>Adicionar</button>
+                    class='bg-[#ABA1C6] rounded-[2rem] text-[#FFF5F6] outline-none text-center p-[0.6rem] transition-all duration-100 hover:bg-[#9b8ebc]'>Adicionar</button>
             </div>
             <div
                 class='bg-[#DFDDF2] flex flex-col gap-[1rem] p-[2rem] w-[41rem] h-[30rem] text-[#FFF5F6] border-[0.2rem] border-[#FFF5F6] text-center rounded-[2rem] text-3xl overflow-y-auto transparent-scrollbar col-span-2'>
                 <h1 class='text-[#ABA1C6]'>TAREFAS DO DIA</h1>
-                <div v-for="(t) in tasks" :key="t.id" class='flex flex-row gap-[1rem] text-center p-[0.4rem] rounded-[2rem] bg-[#ABA1C6] min-w-0 max-w-full break-words'>
+                <div v-for="(t) in tasks" :key="t.id" class='flex flex-row gap-[1rem] text-center p-[0.4rem] rounded-[2rem] bg-[#ABA1C6] min-w-0 max-w-full'>
                     <input type="checkbox" v-model="t.completed" class='cursor-pointer accent-amber-200 w-[1rem]'/>
                     <label :class="[{ 'line-through': t.completed }]">{{ t.title }}</label>
-                    <button @click="removeTask(t.id)" class='text-amber-200'>x</button>
+                    <button @click="removeTask(t.id)" class='text-amber-200 transition-all duration-100 hover:text-amber-300 ml-auto mr-[1rem]'>x</button>
                 </div>
             </div>
         </div>
