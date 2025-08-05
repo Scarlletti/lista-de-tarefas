@@ -4,7 +4,7 @@
 
 ## 📋 Descrição
 
-Este é um aplicativo simples de lista de tarefas (To-Do List) criado com Vue.js e estilizado com Tailwind CSS. Ele permite que você adicione, marque como concluída e remova tarefas, mantendo os dados salvos no armazenamento local do navegador.
+Este é um site simples de lista de tarefas (To-Do List) criado com Vue.js e estilizado com Tailwind CSS. Ele permite que você adicione, marque como concluída e remova tarefas, mantendo os dados salvos no armazenamento local do navegador.
 
 ## ✨ Funcionalidades
 
